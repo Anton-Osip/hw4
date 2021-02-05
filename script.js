@@ -212,10 +212,15 @@ document.write('<br><br>')
 document.write(`*** Нарисовать равнобедренный треугольник из символов ^. Высоту выбирает
 пользователь. Например: высота = 5, на экране:<br><br>`);
 
-let height = prompt('Высота ранобедренного треугольника =', 5)
+let height = prompt('Высота ранобедренного треугольника =', 5);
+let space = '-';
 for (let i = 1; i <= height; i++) {
-    document.write('<br>')
+    document.write('<br>');
+    document.write(space.repeat(height - i));
+
     for (let x = 1; x <= i; x++) {
-        document.write('^')
+
+        document.write('X');
     }
+    document.write(space.repeat(height - i));
 }
