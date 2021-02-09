@@ -213,7 +213,7 @@ document.write(`*** Нарисовать равнобедренный треуг
 пользователь. Например: высота = 5, на экране:<br><br>`);
 
 let height = prompt('Высота ранобедренного треугольника =', 5);
-let space = '-';
+let space = '&nbsp; ';
 for (let i = 1; i <= height; i++) {
     document.write('<br>');
     document.write(space.repeat(height - i));
@@ -223,4 +223,23 @@ for (let i = 1; i <= height; i++) {
         document.write('X');
     }
     document.write(space.repeat(height - i));
+}
+
+document.write('<br>-----------------<br>');
+
+let star = '^';
+arr = [];
+
+for (let i = 1; i <= height; i++) {
+
+    arr.push(star);
+    for (let x = 1; x < i; x++) {
+        if (i == 1) {
+            continue;
+        } else {
+            arr.push(star)
+        }
+    }
+    document.write(arr.join(''));
+    document.write('<br>');
 }
